@@ -30,7 +30,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section id="features">hero-card
+    <section id="features">
 
       <Container
         className="bento-grid"

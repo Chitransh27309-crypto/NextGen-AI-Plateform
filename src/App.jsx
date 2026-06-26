@@ -1,7 +1,10 @@
 import './App.css'
 
 import NavbarComponent from './Components/Navbar'
+import Footer from './Components/Footer'
+
 import { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Hero = lazy(() =>
   import("./Components/Hero")
@@ -18,14 +21,11 @@ const Pricing = lazy(() =>
 const Testimonials = lazy(() =>
   import("./Components/Testimonials")
 );
-import Footer from './Components/Footer'
-import { Helmet } from "react-helmet-async";
 
 function App() {
   return (
     <>
       <Helmet>
-
         <title>
           AIFlow - Next Generation AI Platform
         </title>
@@ -33,6 +33,16 @@ function App() {
         <meta
           name="description"
           content="AI-powered workflow automation platform with predictive analytics and real-time insights."
+        />
+
+        <meta
+          name="keywords"
+          content="AI, Automation, SaaS, Analytics, Dashboard, Workflow"
+        />
+
+        <meta
+          name="author"
+          content="Chitransh Singh"
         />
 
         <meta
@@ -45,17 +55,26 @@ function App() {
           content="Automate your business workflows with AI."
         />
 
+        <meta
+          property="og:type"
+          content="website"
+        />
       </Helmet>
+
       <NavbarComponent />
 
       <main>
-        <Suspense fallback={<h1>Loading...</h1>}>
-
+        <Suspense
+          fallback={
+            <div className="text-center py-5">
+              <h2>Loading...</h2>
+            </div>
+          }
+        >
           <Hero />
           <Features />
           <Pricing />
           <Testimonials />
-
         </Suspense>
       </main>
 
