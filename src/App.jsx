@@ -19,7 +19,7 @@ const Testimonials = lazy(() =>
   import("./Components/Testimonials")
 );
 import Footer from './Components/Footer'
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function App() {
   return (

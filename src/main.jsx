@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-
+import { HelmetProvider } from "react-helmet-async";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -15,6 +15,8 @@ AOS.init({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  </React.StrictMode>
 )
