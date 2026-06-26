@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Accordion } from "react-bootstrap";
-import { featuresData } from "../data/featuresData";
+import { featuresData } from "../Data/FeaturesData";
 
 const Features = () => {
 

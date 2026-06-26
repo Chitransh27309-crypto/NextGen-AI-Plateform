@@ -11,7 +11,7 @@ import {
 import {
   pricingMatrix,
   currencyRates
-} from "../data/pricingData";
+} from "../Data/PricingData";
 
 const Pricing = () => {
 
