@@ -30,7 +30,7 @@ const Testimonials = () => {
 
           {reviews.map((review, index) => (
 
-            <Col md={4} key={index}>
+            <Col md={4}  className="mb-4" key={index}>
 
               <Card className="h-100">
 

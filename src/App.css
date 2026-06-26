@@ -23,7 +23,7 @@ body{
 /* ================= HERO ================= */
 
 .hero-section{
-  height:100vh;
+  min-height:100vh;
   display:flex;
   align-items:center;
 
@@ -327,4 +327,52 @@ footer{
   transform:
   translateY(-10px)
   scale(1.02);
+}
+
+@media (max-width: 992px) {
+
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-card {
+    min-height: 250px;
+    margin-top: 40px;
+    padding: 30px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+}
+
+/* ================= MOBILE SPACING ================= */
+
+@media (max-width: 992px) {
+
+  .feature-card,
+  .pricing-card,
+  .card {
+    margin-bottom: 40px;
+    padding: 25px;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .feature-card,
+  .pricing-card,
+  .card {
+    margin-bottom: 50px;
+    min-height: auto;
+
+  }
+
 }

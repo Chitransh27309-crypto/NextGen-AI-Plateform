@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 const Hero = () => {
   return (
     <section className="hero-section">
+
       <Container
         fluid
         className="px-5"
@@ -12,6 +13,7 @@ const Hero = () => {
         <Row className="align-items-center min-vh-100">
 
           <Col lg={6}>
+
             <h1 className="display-3 fw-bold">
               Automate Your Data Pipeline With AI
             </h1>
@@ -21,31 +23,41 @@ const Hero = () => {
               insights using our next generation AI engine.
             </p>
 
-            <Button size="lg" className="me-3">
-              Get Started
-            </Button>
+            <div className="d-flex flex-column flex-sm-row gap-3 mt-4 justify-content-center justify-content-lg-start">
 
-            <Button
-              variant="outline-primary"
-              size="lg"
-            >
-              Book Demo
-            </Button>
+              <Button size="lg">
+                Get Started
+              </Button>
+
+              <Button
+                variant="outline-primary"
+                size="lg"
+              >
+                Book Demo
+              </Button>
+
+            </div>
+
           </Col>
 
           <Col lg={6}>
+
             <div className="hero-card">
+
               <h3>AI Dashboard Preview</h3>
 
-              <p >
+              <p>
                 Analytics • Automation • Predictions
               </p>
+
             </div>
+
           </Col>
 
         </Row>
 
       </Container>
+
     </section>
   )
 }

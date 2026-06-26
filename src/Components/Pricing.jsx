@@ -47,7 +47,7 @@ const Pricing = () => {
 
         <Row className="justify-content-center mb-5">
 
-          <Col md={3}>
+          <Col md={3}  className="mb-4">
 
             <Form.Select
               value={currency}
@@ -72,7 +72,7 @@ const Pricing = () => {
 
           </Col>
 
-          <Col md={3}>
+          <Col md={3}  className="mb-4">
 
             <Form.Select
               value={billingCycle}
@@ -102,7 +102,7 @@ const Pricing = () => {
           {Object.values(pricingMatrix).map(
             (plan) => (
 
-              <Col lg={4} key={plan.name}>
+              <Col lg={4}  className="mb-4" key={plan.name}>
 
                 <Card className="pricing-card h-100 text-center">
 
