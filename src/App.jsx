@@ -1,24 +1,24 @@
 import './App.css'
 
-import NavbarComponent from './components/Navbar'
+import NavbarComponent from './Components/Navbar'
 import { lazy, Suspense } from "react";
 
 const Hero = lazy(() =>
-  import("./components/Hero")
+  import("./Components/Hero")
 );
 
 const Features = lazy(() =>
-  import("./components/Features")
+  import("./Components/Features")
 );
 
 const Pricing = lazy(() =>
-  import("./components/Pricing")
+  import("./Components/Pricing")
 );
 
 const Testimonials = lazy(() =>
-  import("./components/Testimonials")
+  import("./Components/Testimonials")
 );
-import Footer from './components/Footer'
+import Footer from './Components/Footer'
 import { Helmet } from "react-helmet";
 
 function App() {
