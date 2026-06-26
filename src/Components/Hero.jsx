@@ -3,7 +3,11 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 const Hero = () => {
   return (
     <section className="hero-section">
-      <Container fluid className='px-5'>
+      <Container
+        fluid
+        className="px-5"
+        data-aos="fade-up"
+      >
 
         <Row className="align-items-center min-vh-100">
 

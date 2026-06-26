@@ -32,7 +32,10 @@ const Features = () => {
   return (
     <section id="features">hero-card
 
-      <Container fluid className="px-5">
+      <Container
+        className="bento-grid"
+        data-aos="fade-up"
+      >
 
         <h2 className="text-center mb-5">
           Powerful Features
@@ -42,87 +45,86 @@ const Features = () => {
 
           !isMobile ?
 
-          (
+            (
 
-            <div className="bento-grid">
+              <div className="bento-grid">
 
-              {
+                {
 
-                featuresData.map(
-                  (feature, index) => (
+                  featuresData.map(
+                    (feature, index) => (
 
-                    <div
-                      key={index}
-                      className={`bento-card ${
-                        activeIndex === index
-                          ? "active-card"
-                          : ""
-                      }`}
+                      <div
+                        key={index}
+                        className={`bento-card ${activeIndex === index
+                            ? "active-card"
+                            : ""
+                          }`}
 
-                      onMouseEnter={() =>
-                        setActiveIndex(index)
-                      }
-                    >
-
-                      <h3>
-                        {feature.title}
-                      </h3>
-
-                      <p>
-                        {feature.description}
-                      </p>
-
-                    </div>
-
-                  )
-                )
-
-              }
-
-            </div>
-
-          )
-
-          :
-
-          (
-
-            <Accordion
-              activeKey={String(activeIndex)}
-            >
-
-              {
-
-                featuresData.map(
-                  (feature, index) => (
-
-                    <Accordion.Item
-                      eventKey={String(index)}
-                      key={index}
-                    >
-
-                      <Accordion.Header
-                        onClick={() =>
+                        onMouseEnter={() =>
                           setActiveIndex(index)
                         }
                       >
-                        {feature.title}
-                      </Accordion.Header>
 
-                      <Accordion.Body>
-                        {feature.description}
-                      </Accordion.Body>
+                        <h3>
+                          {feature.title}
+                        </h3>
 
-                    </Accordion.Item>
+                        <p>
+                          {feature.description}
+                        </p>
 
+                      </div>
+
+                    )
                   )
-                )
 
-              }
+                }
 
-            </Accordion>
+              </div>
 
-          )
+            )
+
+            :
+
+            (
+
+              <Accordion
+                activeKey={String(activeIndex)}
+              >
+
+                {
+
+                  featuresData.map(
+                    (feature, index) => (
+
+                      <Accordion.Item
+                        eventKey={String(index)}
+                        key={index}
+                      >
+
+                        <Accordion.Header
+                          onClick={() =>
+                            setActiveIndex(index)
+                          }
+                        >
+                          {feature.title}
+                        </Accordion.Header>
+
+                        <Accordion.Body>
+                          {feature.description}
+                        </Accordion.Body>
+
+                      </Accordion.Item>
+
+                    )
+                  )
+
+                }
+
+              </Accordion>
+
+            )
 
         }
 

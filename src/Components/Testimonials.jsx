@@ -26,7 +26,7 @@ const Testimonials = () => {
           Trusted By Teams
         </h2>
 
-        <Row>
+        <Row data-aos="fade-up">
 
           {reviews.map((review, index) => (
 

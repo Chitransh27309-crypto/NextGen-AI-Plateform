@@ -16,7 +16,10 @@ const NavbarComponent = () => {
                         AIFlow
                     </Navbar.Brand>
 
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle
+                        aria-controls="basic-navbar-nav"
+                        aria-label="Toggle navigation"
+                    />
 
                     <Navbar.Collapse id="basic-navbar-nav">
 
@@ -34,7 +37,7 @@ const NavbarComponent = () => {
                                 Reviews
                             </Nav.Link>
 
-                            <Button variant="primary">
+                            <Button variant="primary"  aria-label="Get Started">
                                 Get Started
                             </Button>
 

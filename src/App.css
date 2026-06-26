@@ -10,7 +10,9 @@ body,
   width:100%;
   min-height:100vh;
 }
-
+html{
+  scroll-behavior:smooth;
+}
 body{
   background:#0a0f1c;
   color:#ffffff;
@@ -303,4 +305,26 @@ footer{
     grid-template-columns:1fr;
   }
 
+}
+
+.feature-card,
+.pricing-card,
+.bento-card,
+.card,
+.hero-card{
+
+  transition:
+  transform .3s ease,
+  box-shadow .3s ease;
+}
+
+.feature-card:hover,
+.pricing-card:hover,
+.bento-card:hover,
+.card:hover,
+.hero-card:hover{
+
+  transform:
+  translateY(-10px)
+  scale(1.02);
 }
